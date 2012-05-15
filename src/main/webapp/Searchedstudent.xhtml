@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Yschool_vijay</title>
+    </h:head>
+    <h:body>
+        <center>
+   <h:form>
+            
+            
+            <p:panel header="Searched Student Detail" style="text-align: center">
+                <center>
+                <h:panelGrid columns="2">
+            
+            <h:outputText value="Student_Name:"/>
+            <p:inputText value="#{Student_Bean.searchStd.studentName}"  style="color:maroon"/>           
+             
+            <h:outputText value="Grade:"/>
+            <p:inputText value="#{Student_Bean.searchStd.grade}"  style="color:maroon"/>
+             
+            <h:outputText value="Parent_Name:"/>
+            <p:inputText value="#{Student_Bean.searchStd.parentName}"  style="color:maroon"/> 
+            
+            <h:outputText value="Address:"/>
+            <p:inputText value="#{Student_Bean.searchStd.address}"  style="color:maroon"/>            
+           
+           
+          </h:panelGrid>
+            <h:commandButton value="Search_Window" action="SEARCH_WINDOW">
+                
+            </h:commandButton>
+            
+          </center>
+                
+          </p:panel> 
+        </h:form> </center>
+    </h:body>
+</html>
+

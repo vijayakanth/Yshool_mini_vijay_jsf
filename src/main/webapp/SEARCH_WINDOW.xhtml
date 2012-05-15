@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>yshool_mini_vijay</title>
+    </h:head>
+    
+    <h:body>
+       <p:panel header="Student_Searching">
+            <h3>Welcome to YSchool_Mini_Vijay</h3>
+
+            <h:form >
+                <h:panelGrid  columns="3">
+                   <h:outputText value="Student Name*:"/>
+                   <p:inputText id="nm" value="#{Student_Bean.name}" required="true" requiredMessage="Validation error:Value is required" > </p:inputText>
+                  
+
+                   
+
+                    <h:outputText value="Grade:"/>
+                    <p:selectOneMenu id="grd" value="#{Student_Bean.stgrade}"  >
+                        <f:selectItem itemValue="one" itemLabel="one" />
+                        <f:selectItem itemValue="two" itemLabel="two" />
+                        <f:selectItem itemValue="three" itemLabel="three" />
+                        <f:selectItem itemValue="four" itemLabel="four" />
+                        <f:selectItem itemValue="five" itemLabel="five" />
+                        <f:selectItem itemValue="six" itemLabel="six" />
+                        <f:selectItem itemValue="seven" itemLabel="seven" />
+                        <f:selectItem itemValue="eight" itemLabel="eight" />
+                        <f:selectItem itemValue="nine" itemLabel="nine" />
+                        <f:selectItem itemValue="ten" itemLabel="ten" />
+                        <f:selectItem itemValue="eleven" itemLabel="eleven" />
+                        <f:selectItem itemValue="twelve" itemLabel="twelve" />
+                        <f:selectItem itemValue="thirteen" itemLabel="thirteen" />
+                    </p:selectOneMenu>
+                    <h:outputText/>
+
+                    <h:commandButton id="cmdb" value="Search"  actionListener="#{Student_Bean.Search}" action="#{Student_Bean.searchResponse()}">
+            
+           
+                <f:setPropertyActionListener target="#{Student_Bean.name}" value="#{nm}"/>
+                <f:setPropertyActionListener target="#{Student_Bean.stgrade}" value="#{grd}"/>
+            
+            </h:commandButton>
+                    <p:commandButton type="reset" value="Reset" />
+                </h:panelGrid>
+            </h:form>
+             
+                
+        </p:panel>
+    </h:body>
+</html>
+
